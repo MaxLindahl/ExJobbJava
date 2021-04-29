@@ -3,21 +3,27 @@ package Uppgift2;
 import java.util.concurrent.BlockingQueue;
 
 public class Producer implements Runnable {
-    private BlockingQueue<Object> queue;
+    private BlockingQueue<Task> queue;
+    int tasksToProduce;
 
-    public Producer(BlockingQueue<Object> queue) {
+    public Producer(BlockingQueue<Task> queue, int tasksToProduce) {
         this.queue = queue;
-
+        this.tasksToProduce = tasksToProduce;
     }
 
     @Override
     public void run() {
-        while (true) {
+        while (tasksToProduce > 0) {
+            Task task = new Task();
+            task.setNumber();
             try {
-                queue.put(new Object());
+                queue.put(task);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
+            System.out.println("Task produced");
+            tasksToProduce--;
         }
     }
+
 }

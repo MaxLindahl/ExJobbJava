@@ -3,7 +3,7 @@ package Uppgift3;
 public class Main {
 
     public static void main(String[] args) {
-        int noThreads = 500;
+        int noThreads = 3000;
 
         long timeBeforeSetup = System.nanoTime();
 
