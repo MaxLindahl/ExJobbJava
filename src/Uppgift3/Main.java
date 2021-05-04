@@ -3,11 +3,9 @@ package Uppgift3;
 public class Main {
 
     public static void main(String[] args) {
+        int noThreads = 3000;
+
         long timeBeforeSetup = System.nanoTime();
-
-        int noThreads = 8;
-
-
 
         Thread[] threads = new Thread[noThreads];
 

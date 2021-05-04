@@ -7,10 +7,10 @@ public class Main {
 
     public static void main(String[] args) {
         long timeBeforeSetup = System.nanoTime();
-        int bufferSize = 1000;
+        int bufferSize = 10000;
         int noProducers = 4;
         int noConsumers = 4;
-        int tasks = 1000000;
+        int tasks = 200000;
         BlockingQueue<Task> queue = new ArrayBlockingQueue<>(bufferSize);
 
 

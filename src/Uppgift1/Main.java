@@ -8,7 +8,7 @@ public class Main {
         long timeBeforeSetup = System.nanoTime();
         try{
             long numbersToSearch = 10000000;
-            int numberOfThreads = 8;
+            int numberOfThreads = 10000;
 
             long resultGatherer = 0;
 
@@ -29,6 +29,7 @@ public class Main {
             System.out.println("Setup time: " + (timeAfterSetup-timeBeforeSetup)/1.0E9);
             System.out.println("Execution time: " + (timeDone-timeAfterSetup)/1.0E9);
             System.out.println("Total time: " + (timeDone-timeBeforeSetup)/1.0E9);
+
         }catch(Exception e){
             System.out.println(e);
         }

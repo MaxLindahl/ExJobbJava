@@ -3,9 +3,9 @@ package Uppgift4;
 public class Main {
     public static void main(String[] args) {
         long timeBeforeSetup = System.nanoTime();
-        int noThreads = 200;
-        int noAccounts = 400;
-        int noLoops = 1000000;
+        int noThreads = 1000;
+        int noAccounts = 1;
+        int noLoops = 1000;
 
         Bank bank = new Bank();
         Thread[] threads = new Thread[noThreads];

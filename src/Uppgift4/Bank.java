@@ -10,12 +10,17 @@ public class Bank {
     public void withdrawMoneyFromAccount(int id, int money){
         synchronized (accounts.get(id)) {
             accounts.get(id).withdrawMoney(money);
+            //print here to avoid compiler optimisation
+            System.out.println("Withdraw");
+
         }
     }
 
     public void depositMoneyToAccount(int id,int money){
         synchronized (accounts.get(id)) {
             accounts.get(id).depositMoney(money);
+            //print here to avoid compiler optimisation
+            System.out.println("Deposit");
         }
     }
     public void createAccount(int money){
